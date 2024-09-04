@@ -1,0 +1,122 @@
+/* General styles for root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f4f4f9;
+  /* Light background for a clean look */
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms, transform 300ms;
+  will-change: filter, transform;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.7));
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.7));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component styling */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  margin: 1.5em auto;
+  max-width: 90%;
+}
+
+/* Read the docs link styling */
+.read-the-docs {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Todo item styling */
+.todo {
+  background: #ffeb3b;
+  /* Light yellow background for todos */
+  border-radius: 8px;
+  padding: 1em 2em;
+  margin: 1em auto;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 300ms, transform 300ms;
+}
+
+.todo:hover {
+  background-color: #fdd835;
+  /* Slightly darker yellow on hover */
+  transform: translateY(-2px);
+}
+
+.todo button {
+  padding: 0.5em 1em;
+  margin-left: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 300ms, color 300ms;
+}
+
+.todo button:hover {
+  background-color: #45a049;
+  /* Green background on hover */
+  color: white;
+}
+
+/* Completed todo item styling */
+.done {
+  opacity: 0.6;
+  background-color: #e0e0e0;
+  /* Light gray background for completed items */
+}
+
+.done p {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Active button styling */
+.button-active {
+  background-color: #4caf50;
+  /* Green background for active button */
+  color: white;
+}
+
+.button-active:hover {
+  background-color: #388e3c;
+  /* Darker green on hover */
+}
+
+.error {
+  background-color: red;
+}
